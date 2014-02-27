@@ -22,11 +22,11 @@ $(document).ready(function () {
 
       var stories_html = '';
       $.each(stories, function (i, story) {
-        stories_html += '<li><p class="title"><a href="' + get_url(story) + '">' + story.title + '</a> '
+        stories_html += '<li><p class="title"><span class="badge">' + story.points + '</span> '
+        stories_html += '<a href="' + get_url(story) + '">' + story.title + '</a> '
         stories_html += '<span>' + get_domain(story.url) + '</span></p>'
-        stories_html += '<p><span>' + story.points + ' points | '
         stories_html += 'submitted at ' + get_time(story) + ' | '
-        stories_html += '<a href="' + get_comments_url(story) + '">' + story.num_comments + ' comments</a></span></p></li>'; 
+        stories_html += '<a href="' + get_comments_url(story) + '">' + story.num_comments + ' comments</a></p></li>'; 
       });
 
       $('#stories').html(stories_html);
