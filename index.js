@@ -7,7 +7,6 @@ var day = new Date(today.getTime());
 var later_button = null;
 var later_button_link = null;
 
-
 $(document).ready(function () {
 
   later_button = $('#pagination .disabled');
