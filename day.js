@@ -39,7 +39,8 @@ $(document).ready(function () {
 function get_domain(url)
 {
   // http://stackoverflow.com/questions/8498592/extract-root-domain-name-from-string/8498629#8498629
-  var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+  // we cannot call match on null, only on strings
+  var matches = url && url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
   // domain will be null if no match is found
   var domain = matches && matches[1];
   if (domain === null) {
