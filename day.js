@@ -11,7 +11,7 @@ $(document).ready(function () {
   // Algolia API works with 10-digit timestamps, ingoring milliseconds
   var start_of_the_next_day = Math.floor(day.getTime() / 1000);
 
-  var algolia_api = 'http://hn.algolia.com/api/v1/search?numericFilters=' + 
+  var algolia_api = 'https://hn.algolia.com/api/v1/search?numericFilters=' + 
   'created_at_i>' + start_of_the_day + 
   ',created_at_i<' + start_of_the_next_day + 
   '&tagFilters=story&hitsPerPage=' + STORIES_PER_DAY;
